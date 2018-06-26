@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pusaka.Web", "Pusaka.Web\Pusaka.Web.csproj", "{133A326B-75D5-4475-9230-08C6B141E821}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{133A326B-75D5-4475-9230-08C6B141E821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{133A326B-75D5-4475-9230-08C6B141E821}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{133A326B-75D5-4475-9230-08C6B141E821}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{133A326B-75D5-4475-9230-08C6B141E821}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0EF9D78C-8EFC-4CA0-AFE2-901904A93930}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://yosuu.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Pusaka.Web\\Pusaka.Web.csproj
+		SccProjectName1 = Pusaka.Web
+		SccLocalPath1 = Pusaka.Web
+	EndGlobalSection
+EndGlobal

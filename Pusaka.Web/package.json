@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "name": "webbola",
+  "private": true,
+  "wbp": "webpack wwwroot/source/app.js wwwroot/dist/bundle.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yanitra Abdi Dharmawan",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "datatables.net": "1.10.16",
+    "datatables.net-bs4": "1.10.16",
+    "dropzone": "5.4.0",
+    "feather-icons": "^4.7.3",
+    "jquery": "^3.3.1",
+    "jquery-validation": "^1.17.0",
+    "jquery-validation-unobtrusive": "^3.2.8",
+    "pack": "^2.1.0",
+    "popper.js": "^1.14.0",
+    "webpack": "4.12.0"
+  }
+}
