@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pusaka.Web", "Pusaka.Web\Pusaka.Web.csproj", "{133A326B-75D5-4475-9230-08C6B141E821}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pusaka.Web", "Pusaka.Web\Pusaka.Web.csproj", "{133A326B-75D5-4475-9230-08C6B141E821}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pusaka", "Pusaka\Pusaka.csproj", "{3075157F-C62D-4AA4-AFC8-FC321802B9C1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pusaka.Angular", "Pusaka.Angular\Pusaka.Angular.csproj", "{12D9899F-5C7A-4382-85E3-B41FEEEE161E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,20 +19,19 @@ Global
 		{133A326B-75D5-4475-9230-08C6B141E821}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{133A326B-75D5-4475-9230-08C6B141E821}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{133A326B-75D5-4475-9230-08C6B141E821}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3075157F-C62D-4AA4-AFC8-FC321802B9C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3075157F-C62D-4AA4-AFC8-FC321802B9C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3075157F-C62D-4AA4-AFC8-FC321802B9C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3075157F-C62D-4AA4-AFC8-FC321802B9C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12D9899F-5C7A-4382-85E3-B41FEEEE161E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12D9899F-5C7A-4382-85E3-B41FEEEE161E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12D9899F-5C7A-4382-85E3-B41FEEEE161E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12D9899F-5C7A-4382-85E3-B41FEEEE161E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0EF9D78C-8EFC-4CA0-AFE2-901904A93930}
-	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 2
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://yosuu.visualstudio.com/
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Pusaka.Web\\Pusaka.Web.csproj
-		SccProjectName1 = Pusaka.Web
-		SccLocalPath1 = Pusaka.Web
 	EndGlobalSection
 EndGlobal

@@ -1,0 +1,62 @@
+﻿<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+    <h1 class="h2">Murid</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <button class="btn btn-sm btn-outline-primary create" data-toggle="modal" data-target="#modalTransaction"><span data-feather="plus"></span> Tambah Murid</button>
+    </div>
+</div>
+
+<table id="tblSummary" class="table table-striped table-bordered" style="width:100%">
+    <thead>
+        <tr>
+            <th>Logo</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<div class="modal fade" id="modalTransaction" tabindex="-1" role="dialog" aria-labelledby="ModalAddCenter" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Add New Club</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="formTransaction">
+                    <div class="form-group">
+                        <label for="tbLeagueName">Club Name</label>
+                        <input type="text" class="form-control" id="tbClubName" data-lookup-field="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="tbLeagueDescription">Description</label>
+                        <textarea class="form-control" id="tbClubDescription" rows="3" data-lookup-field="description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="tbLeagueImage">Upload Logo</label>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="tbLeagueImage">
+                            <label class="custom-file-label" for="tbClubImage">Choose file</label>
+                        </div>
+                    </div>
+                    <form id="my-awesome-dropzone" class="dropzone" enctype="multipart/form-data" action="UploadFiles">
+                        <div class="dropzone-previews"></div>
+                    </form>
+                    <div>
+                        <div class="m text-left" id="upload"><small><font style="color:red">图片文件个数不得超过5个。</font></small> </div>
+                        <input id="uploadFile" type="button" value="Ok" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger btn-sm delete" data-dismiss="modal" id="btDelete"><span data-feather="trash-2"></span> Delete</button>
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal"><span data-feather="x-circle"></span> Close</button>
+                <button type="button" class="btn btn-success btn-sm submit" id="btSubmit"><span data-feather="save"></span> Save</button>
+            </div>
+        </div>
+    </div>
+</div>

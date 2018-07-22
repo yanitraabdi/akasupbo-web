@@ -1,0 +1,105 @@
+﻿<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+    <div class="sidebar-sticky">
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a [routerLink]="['/home']" class="nav-link active">
+                    <span data-feather="home"></span>
+                    Dashboard <span class="sr-only">(current)</span>
+                </a>
+            </li>
+
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                <span>Member</span>
+            </h6>
+
+            <li class="nav-item">
+                <a [routerLink]="['/student']" class="nav-link">
+                    <span data-feather="list"></span>
+                    Murid
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a [routerLink]="['/school']" class="nav-link">
+                    <span data-feather="list"></span>
+                    Sekolah
+                </a>
+            </li>
+
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                <span>Missions</span>
+            </h6>
+
+            <li class="nav-item">
+                <a asp-area="" asp-controller="Admin" asp-action="Standing" class="nav-link">
+                    <span data-feather="list"></span>
+                    Missions
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a asp-area="" asp-controller="Admin" asp-action="League" class="nav-link">
+                    <span data-feather="target"></span>
+                    Single Mission
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-area="" asp-controller="Admin" asp-action="Match" class="nav-link">
+                    <span data-feather="star"></span>
+                    Mission Question
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-area="" asp-controller="Admin" asp-action="Club" class="nav-link">
+                    <span data-feather="globe"></span>
+                    Mission Sequential
+                </a>
+            </li>
+
+            <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                <span>Configuration</span>
+            </h6>
+
+            <li class="nav-item">
+                <a [routerLink]="['/badge']" class="nav-link">
+                    <span data-feather="users"></span>
+                    Badge
+                </a>
+            </li>
+            <li class="nav-item">
+                <a [routerLink]="['/avatar']" class="nav-link">
+                    <span data-feather="users"></span>
+                    Avatar
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-area="" asp-controller="Admin" asp-action="Admin" class="nav-link">
+                    <span data-feather="user"></span>
+                    User Admin
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-area="" asp-controller="Admin" asp-action="Role" class="nav-link">
+                    <span data-feather="compass"></span>
+                    Roles
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-area="" asp-controller="Admin" asp-action="TVChannel" class="nav-link">
+                    <span data-feather="tv"></span>
+                    TV Channel
+                </a>
+            </li>
+            <li class="nav-item">
+                <a asp-area="" asp-controller="Admin" asp-action="Configuration" class="nav-link">
+                    <span data-feather="settings"></span>
+                    Settings
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+    @RenderBody()
+</main>
