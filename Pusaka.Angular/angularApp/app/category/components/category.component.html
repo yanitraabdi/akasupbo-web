@@ -1,0 +1,66 @@
+﻿<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+    <h1 class="h2">Kategori</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+        <button class="btn btn-sm btn-outline-primary create" data-toggle="modal" data-target="#modalTransaction"><span data-feather="plus"></span> Tambah Kategori</button>
+    </div>
+</div>
+
+<table id="tblSummary" class="table table-striped table-bordered" style="width:100%">
+    <thead>
+        <tr>
+            <th>Nama</th>
+            <th>Tags</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let category of categories.listCategory; let i = index">
+            <td>{{category.categoryName}}</td>
+            <td>{{category.tag}}</td>
+            <td class="text-right">
+                <button (click)="showForEdit(category)" class="btn btn-primary btn-xs" type="button" data-toggle="modal" data-target="#modalTransaction">Detail</button>
+                <button (click)="onDelete(category.categoryId)" class="btn btn-danger btn-xs" type="button">Hapus</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="modal fade" id="modalTransaction" tabindex="-1" role="dialog" aria-labelledby="ModalAddCenter" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Tambah Kategori Baru</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form id="formTransaction" #categoryForm="ngForm" (ngSubmit)="onSubmit(categoryForm)">
+                <div class="modal-body">
+                    <input type="hidden" name="CategoryId" #CategoryId="ngModel" [(ngModel)]="dataService.CategoryId">
+                    <div class="form-group">
+                        <label for="tbCategoryName">Nama Kategori</label>
+                        <input type="text" class="form-control" id="categoryName" data-lookup-field="name" name="categoryName" #categoryName="ngModel" [(ngModel)]="category.categoryName" required>
+                        <div class="validation-error" *ngIf="categoryName.invalid && categoryName.touched">This Field is Required.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tbCategoryTag">Tag</label>
+                        <input type="text" class="form-control" id="tag" data-lookup-field="tag" name="tag" #tag="ngModel" [(ngModel)]="category.tag">
+                        <div class="validation-error" *ngIf="tag.invalid && tag.touched">This Field is Required.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="tbLeagueImage">Upload Gambar</label>
+                        <input type="text" class="form-control" id="imageFile" data-lookup-field="imageFile" name="imageFile" #tag="ngModel" [(ngModel)]="category.imageFile">
+                        <!--<div class="custom-file">
+                            <input type="file" class="custom-file-input" id="tbLeagueImage">
+                            <label class="custom-file-label" for="tbClubImage">Choose file</label>
+                        </div>-->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal" (click)="resetForm(categoryForm)"><span data-feather="x-circle"></span> Close</button>
+                    <button type="submit" class="btn btn-success btn-sm submit" [disabled]="!categoryForm.valid"><span data-feather="save"></span> Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

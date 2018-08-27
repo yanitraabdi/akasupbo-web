@@ -9,6 +9,7 @@ import { BadgeModule } from './badge/badge.module';
 import { AvatarModule } from './avatar/avatar.module';
 import { StudentModule } from './student/student.module';
 import { SchoolModule } from './school/school.module';
+import { CategoryModule } from './category/category.module';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({
@@ -21,6 +22,7 @@ import { SharedModule } from './shared/shared.module';
         BadgeModule,
         AvatarModule,
         StudentModule,
+        CategoryModule,
         SchoolModule
     ],
 
@@ -28,7 +30,7 @@ import { SharedModule } from './shared/shared.module';
         AppComponent
     ],
 
-    bootstrap: [AppComponent],
+    bootstrap: [AppComponent]
 })
 
 export class AppModule { }

@@ -3,6 +3,8 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 
 import { Configuration } from '../app.constants';
 import { ThingService } from './services/thing-data.service';
+import { CategoryService } from './services/category-data.service';
+import { BadgeService } from './services/badge-data.service';
 
 @NgModule({
     imports: [
@@ -16,6 +18,8 @@ export class CoreModule {
             ngModule: CoreModule,
             providers: [
                 ThingService,
+                CategoryService,
+                BadgeService,
                 Configuration
             ]
         };
