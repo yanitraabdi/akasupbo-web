@@ -15,11 +15,11 @@
     </thead>
     <tbody>
         <tr *ngFor="let category of categories.listCategory; let i = index">
-            <td>{{category.categoryName}}</td>
-            <td>{{category.tag}}</td>
+            <td>{{category.CategoryName}}</td>
+            <td>{{category.Tag}}</td>
             <td class="text-right">
                 <button (click)="showForEdit(category)" class="btn btn-primary btn-xs" type="button" data-toggle="modal" data-target="#modalTransaction">Detail</button>
-                <button (click)="onDelete(category.categoryId)" class="btn btn-danger btn-xs" type="button">Hapus</button>
+                <button (click)="onDelete(category.CategoryId)" class="btn btn-danger btn-xs" type="button">Hapus</button>
             </td>
         </tr>
     </tbody>
@@ -39,17 +39,17 @@
                     <input type="hidden" name="CategoryId" #CategoryId="ngModel" [(ngModel)]="dataService.CategoryId">
                     <div class="form-group">
                         <label for="tbCategoryName">Nama Kategori</label>
-                        <input type="text" class="form-control" id="categoryName" data-lookup-field="name" name="categoryName" #categoryName="ngModel" [(ngModel)]="category.categoryName" required>
+                        <input type="text" class="form-control" id="CategoryName" data-lookup-field="CategoryName" name="CategoryName" #categoryName="ngModel" [(ngModel)]="category.CategoryName" required>
                         <div class="validation-error" *ngIf="categoryName.invalid && categoryName.touched">This Field is Required.</div>
                     </div>
                     <div class="form-group">
                         <label for="tbCategoryTag">Tag</label>
-                        <input type="text" class="form-control" id="tag" data-lookup-field="tag" name="tag" #tag="ngModel" [(ngModel)]="category.tag">
+                        <input type="text" class="form-control" id="Tag" data-lookup-field="Tag" name="Tag" #tag="ngModel" [(ngModel)]="category.Tag">
                         <div class="validation-error" *ngIf="tag.invalid && tag.touched">This Field is Required.</div>
                     </div>
                     <div class="form-group">
                         <label for="tbLeagueImage">Upload Gambar</label>
-                        <input type="text" class="form-control" id="imageFile" data-lookup-field="imageFile" name="imageFile" #tag="ngModel" [(ngModel)]="category.imageFile">
+                        <input type="text" class="form-control" id="ImageFile" data-lookup-field="ImageFile" name="ImageFile" #tag="ngModel" [(ngModel)]="category.ImageFile">
                         <!--<div class="custom-file">
                             <input type="file" class="custom-file-input" id="tbLeagueImage">
                             <label class="custom-file-label" for="tbClubImage">Choose file</label>

@@ -12,6 +12,7 @@ export class CategoryComponent implements OnInit {
     message: string;
     categories: ListCategory = new ListCategory();
     category: Category = new Category();
+    //dialogRef: ConfirmationDialog;
 
     constructor(private dataService: CategoryService) {
         this.message = 'Things from the ASP.NET Core API';
@@ -21,35 +22,11 @@ export class CategoryComponent implements OnInit {
         this.getAllCategories();
     }
 
-    post() {
-        this.dataService.add(this.category).subscribe(
-            () => {
-                this.getAllCategories();
-                this.category = new Category();
-            },
-            error => {
-                console.log(error);
-            }
-        );
-    }
-
-    put() {
-        this.dataService.update(this.category.CategoryId, this.category).subscribe(
-            () => {
-                this.getAllCategories();
-                this.category = new Category();
-                console.log(this.category);
-            },
-            error => {
-                console.log(error);
-            }
-        );
-    }
-
     onSubmit(form: NgForm) {
-        if (form.value.EmployeeID == null)
+        if (!this.category.CategoryId)
         {
-            this.dataService.add(form.value)
+            this.dataService
+                .add(form.value)
                 .subscribe(() => {
                     this.resetForm(form);
                     this.getAllCategories();
@@ -61,8 +38,9 @@ export class CategoryComponent implements OnInit {
         }
         else
         {
+            form.value.CategoryId = this.category.CategoryId;
             this.dataService
-                .update(form.value.EmployeeID, form.value)
+                .update(this.category.CategoryId, form.value)
                 .subscribe(() => {
                     this.resetForm(form);
                     this.getAllCategories();
@@ -76,24 +54,30 @@ export class CategoryComponent implements OnInit {
 
     showForEdit(category: Category) {
         this.category = Object.assign({}, category);
+        console.log(category);
     }
 
-    onDelete(id: number) {
-        if (confirm('Are you sure to delete this record ?') === true) {
-            this.dataService.delete(id);
-        }
-    }
+    //onDelete(id: number) {
+    //    this.dialogRef = this.dialog.open(ConfirmationDialog, {
+    //        disableClose: false
+    //    });
+    //    this.dialogRef.confirmMessage = "Are you sure you want to delete?"
+
+    //    this.dialogRef.afterClosed().subscribe(result => {
+    //        if (result) {
+    //            this.dataService.delete(id);
+    //        }
+    //        this.dialogRef = null;
+    //    });
+        //if (confirm('Are you sure to delete this record ?') === true) {
+        //    this.dataService.delete(id);
+        //}
+    //}
 
     resetForm(form?: NgForm) {
         if (form != null)
             form.reset();
-        this.category = {
-            CategoryId: null,
-            CategoryName: '',
-            ImageFile: '',
-            Status: '',
-            Tag: ''
-        }
+        this.category = new Category();
     }
 
     private getAllCategories() {

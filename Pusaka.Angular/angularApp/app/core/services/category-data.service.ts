@@ -34,9 +34,11 @@ export class CategoryService {
         return this.http.post<Category>(this.actionUrl, toAdd, { headers: this.headers });
     }
 
-    update(id: number, itemToUpdate: any): Observable<Category> {
+    update(id: number, categoryToUpdate: Category): Observable<Category> {
+        const toUpdate = JSON.stringify({ CategoryName: categoryToUpdate.CategoryName, Tag: categoryToUpdate.Tag, ImageFile: categoryToUpdate.ImageFile });
+
         return this.http
-            .put<Category>(this.actionUrl + id, JSON.stringify(itemToUpdate), { headers: this.headers });
+            .put<Category>(this.actionUrl + id, toUpdate, { headers: this.headers });
     }
 
     delete(id: number): Observable<any> {

@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <TypeScriptToolsVersion>2.8</TypeScriptToolsVersion>
+    <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="angularApp\app\avatar\avatar.module.ts" />
@@ -15,9 +15,11 @@
     <None Remove="angularApp\app\category\components\category.component.ts" />
     <None Remove="angularApp\app\core\services\badge-data.service.ts" />
     <None Remove="angularApp\app\core\services\category-data.service.ts" />
+    <None Remove="angularApp\app\framework\confirmation-dialog\components\confirmation-dialog.component.ts" />
+    <None Remove="angularApp\app\framework\confirmation-dialog\confirmation-dialog.module.ts" />
+    <None Remove="angularApp\app\framework\confirmation-dialog\confirmation-dialog.routes.ts" />
     <None Remove="angularApp\app\models\badge.ts" />
     <None Remove="angularApp\app\models\category.ts" />
-    <None Remove="angularApp\app\models\validator.ts" />
     <None Remove="angularApp\app\school\components\school.component.ts" />
     <None Remove="angularApp\app\school\school.module.ts" />
     <None Remove="angularApp\app\school\school.routes.ts" />
@@ -46,9 +48,11 @@
     <TypeScriptCompile Include="angularApp\app\category\components\category.component.ts" />
     <TypeScriptCompile Include="angularApp\app\core\services\badge-data.service.ts" />
     <TypeScriptCompile Include="angularApp\app\core\services\category-data.service.ts" />
+    <TypeScriptCompile Include="angularApp\app\framework\confirmation-dialog\components\confirmation-dialog.component.ts" />
+    <TypeScriptCompile Include="angularApp\app\framework\confirmation-dialog\confirmation-dialog.module.ts" />
+    <TypeScriptCompile Include="angularApp\app\framework\confirmation-dialog\confirmation-dialog.routes.ts" />
     <TypeScriptCompile Include="angularApp\app\models\badge.ts" />
     <TypeScriptCompile Include="angularApp\app\models\category.ts" />
-    <TypeScriptCompile Include="angularApp\app\models\validator.ts" />
     <TypeScriptCompile Include="angularApp\app\school\components\school.component.ts" />
     <TypeScriptCompile Include="angularApp\app\school\school.module.ts" />
     <TypeScriptCompile Include="angularApp\app\school\school.routes.ts" />
@@ -58,6 +62,6 @@
     <TypeScriptCompile Include="angularApp\app\student\student.routes.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="angularApp\app\mission\" />
+    <Folder Include="angularApp\app\mission\NewFolder\" />
   </ItemGroup>
 </Project>

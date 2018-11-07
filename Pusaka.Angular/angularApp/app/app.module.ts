@@ -12,6 +12,9 @@ import { SchoolModule } from './school/school.module';
 import { CategoryModule } from './category/category.module';
 import { SharedModule } from './shared/shared.module';
 
+//import { ConfirmationDialog } from './framework/confirmation-dialog/components/confirmation-dialog.component';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -23,11 +26,13 @@ import { SharedModule } from './shared/shared.module';
         AvatarModule,
         StudentModule,
         CategoryModule,
-        SchoolModule
+        SchoolModule,
+        FormsModule
     ],
 
     declarations: [
-        AppComponent
+        AppComponent,
+        //ConfirmationDialog
     ],
 
     bootstrap: [AppComponent]

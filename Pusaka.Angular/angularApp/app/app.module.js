@@ -12,7 +12,11 @@ import { CoreModule } from './core/core.module';
 import { HomeModule } from './home/home.module';
 import { BadgeModule } from './badge/badge.module';
 import { AvatarModule } from './avatar/avatar.module';
+import { StudentModule } from './student/student.module';
+import { SchoolModule } from './school/school.module';
+import { CategoryModule } from './category/category.module';
 import { SharedModule } from './shared/shared.module';
+import { FormsModule } from '@angular/forms';
 var AppModule = (function () {
     function AppModule() {
     }
@@ -25,12 +29,16 @@ var AppModule = (function () {
                 CoreModule.forRoot(),
                 HomeModule,
                 BadgeModule,
-                AvatarModule
+                AvatarModule,
+                StudentModule,
+                CategoryModule,
+                SchoolModule,
+                FormsModule
             ],
             declarations: [
-                AppComponent
+                AppComponent,
             ],
-            bootstrap: [AppComponent],
+            bootstrap: [AppComponent]
         })
     ], AppModule);
     return AppModule;

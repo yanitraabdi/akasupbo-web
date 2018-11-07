@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
 var Configuration = (function () {
     function Configuration() {
         this.Server = 'http://localhost:5000/';
-        this.ApiUrl = 'http://localhost/Pusaka.Api';
+        this.ApiUrl = 'http://localhost/Pusaka.Api/';
     }
     Configuration = __decorate([
         Injectable()

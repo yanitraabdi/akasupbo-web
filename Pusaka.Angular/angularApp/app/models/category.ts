@@ -1,13 +1,14 @@
 ﻿export class ListCategory {
-    public ListCategory = Category;
-    public ErrorCode = 0;
-    public ErrorDesc = '';
+    ListCategory: Category;
+    ErrorCode: number;
+    ErrorDesc: string;
 }
 
 export class Category {
-     public CategoryId = 0;
-     public CategoryName = '';
-     public ImageFile = '';
-     public Tag = '';
-     public Status = '';
+    CategoryId: number;
+    CategoryName: string;
+    ImageFile: string;
+    Tag: string;
+    Statu: number;
+    StatusDesc: string;
 }

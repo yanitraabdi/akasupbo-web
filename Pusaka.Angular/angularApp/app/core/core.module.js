@@ -8,6 +8,8 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Configuration } from '../app.constants';
 import { ThingService } from './services/thing-data.service';
+import { CategoryService } from './services/category-data.service';
+import { BadgeService } from './services/badge-data.service';
 var CoreModule = (function () {
     function CoreModule() {
     }
@@ -17,6 +19,8 @@ var CoreModule = (function () {
             ngModule: CoreModule_1,
             providers: [
                 ThingService,
+                CategoryService,
+                BadgeService,
                 Configuration
             ]
         };
