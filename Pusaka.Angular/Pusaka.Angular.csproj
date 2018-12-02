@@ -4,6 +4,12 @@
     <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Remove="angularApp\app\mission\NewFolder\**" />
+    <Content Remove="angularApp\app\mission\NewFolder\**" />
+    <EmbeddedResource Remove="angularApp\app\mission\NewFolder\**" />
+    <None Remove="angularApp\app\mission\NewFolder\**" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove="angularApp\app\avatar\avatar.module.ts" />
     <None Remove="angularApp\app\avatar\avatar.routes.ts" />
     <None Remove="angularApp\app\avatar\components\avatar.component.ts" />
@@ -20,9 +26,12 @@
     <None Remove="angularApp\app\framework\confirmation-dialog\confirmation-dialog.routes.ts" />
     <None Remove="angularApp\app\models\badge.ts" />
     <None Remove="angularApp\app\models\category.ts" />
+    <None Remove="angularApp\app\models\mission.ts" />
+    <None Remove="angularApp\app\models\user.ts" />
     <None Remove="angularApp\app\school\components\school.component.ts" />
     <None Remove="angularApp\app\school\school.module.ts" />
     <None Remove="angularApp\app\school\school.routes.ts" />
+    <None Remove="angularApp\app\shared\components\navigation\navigation.component.ts" />
     <None Remove="angularApp\app\shared\components\sidebar\sidebar.component.ts" />
     <None Remove="angularApp\app\student\components\student.component.ts" />
     <None Remove="angularApp\app\student\student.module.ts" />
@@ -53,15 +62,18 @@
     <TypeScriptCompile Include="angularApp\app\framework\confirmation-dialog\confirmation-dialog.routes.ts" />
     <TypeScriptCompile Include="angularApp\app\models\badge.ts" />
     <TypeScriptCompile Include="angularApp\app\models\category.ts" />
+    <TypeScriptCompile Include="angularApp\app\models\mission.ts" />
+    <TypeScriptCompile Include="angularApp\app\models\user.ts" />
     <TypeScriptCompile Include="angularApp\app\school\components\school.component.ts" />
     <TypeScriptCompile Include="angularApp\app\school\school.module.ts" />
     <TypeScriptCompile Include="angularApp\app\school\school.routes.ts" />
+    <TypeScriptCompile Include="angularApp\app\shared\components\navigation\navigation.component.ts" />
     <TypeScriptCompile Include="angularApp\app\shared\components\sidebar\sidebar.component.ts" />
     <TypeScriptCompile Include="angularApp\app\student\components\student.component.ts" />
     <TypeScriptCompile Include="angularApp\app\student\student.module.ts" />
     <TypeScriptCompile Include="angularApp\app\student\student.routes.ts" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="angularApp\app\mission\NewFolder\" />
+    <Folder Include="angularApp\app\mission\" />
   </ItemGroup>
 </Project>

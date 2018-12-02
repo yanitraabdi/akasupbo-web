@@ -1,6 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import {
+    MatSidenavModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatToolbarModule,
+    MatCheckboxModule,
+    MatButtonModule,
+    MatIconModule,
+    MatListModule,
+    MatDividerModule
+} from '@angular/material';
 
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
@@ -8,7 +19,16 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 @NgModule({
     imports: [
         CommonModule,
-        RouterModule
+        RouterModule,
+        MatSidenavModule,
+        MatFormFieldModule,
+        MatDatepickerModule,
+        MatToolbarModule,
+        MatCheckboxModule,
+        MatButtonModule,
+        MatIconModule,
+        MatListModule,
+        MatDividerModule
     ],
 
     declarations: [

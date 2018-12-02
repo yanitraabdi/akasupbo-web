@@ -3,6 +3,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+import { MatTableModule, MatButtonModule, MatSortModule, MatPaginatorModule, MatDialog, MatDialogRef } from '@angular/material';
+
 import { CategoryComponent } from './components/category.component';
 import { CategoryRoutes } from './category.routes';
 
@@ -11,7 +13,13 @@ import { CategoryRoutes } from './category.routes';
         CommonModule,
         FormsModule,
         HttpClientModule,
-        CategoryRoutes
+        CategoryRoutes,
+        MatTableModule,
+        MatButtonModule,
+        MatSortModule,
+        MatPaginatorModule,
+        MatDialog,
+        MatDialogRef
     ],
 
     declarations: [

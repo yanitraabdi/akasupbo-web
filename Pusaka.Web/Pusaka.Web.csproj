@@ -5,12 +5,18 @@
     <SccProvider>SAK</SccProvider>
     <SccAuxPath>SAK</SccAuxPath>
     <SccLocalPath>SAK</SccLocalPath>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
   </PropertyGroup>
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <UserSecretsId>aspnet-Pusaka.Web-3913A150-F02D-4C8A-913E-91A08F272681</UserSecretsId>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="app\component\category.ts" />
+    <None Remove="app\model\CategoryModel.ts" />
+  </ItemGroup>
 
 
   <ItemGroup>
@@ -23,6 +29,11 @@
     <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.3" />
     <DotNetCliToolReference Include="Microsoft.Extensions.SecretManager.Tools" Version="2.0.2" />
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="app\component\category.ts" />
+    <TypeScriptCompile Include="app\model\CategoryModel.ts" />
   </ItemGroup>
 
 </Project>

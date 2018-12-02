@@ -1,5 +1,5 @@
 ﻿export class ListCategory {
-    ListCategory: Category;
+    listCategory: Category[];
     ErrorCode: number;
     ErrorDesc: string;
 }

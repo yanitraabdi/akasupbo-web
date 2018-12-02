@@ -5,6 +5,7 @@
   "wbp": "webpack wwwroot/source/app.js wwwroot/dist/bundle.js",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --config webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Yanitra Abdi Dharmawan",
@@ -20,7 +21,12 @@
     "jquery-validation": "^1.17.0",
     "jquery-validation-unobtrusive": "^3.2.8",
     "pack": "^2.1.0",
-    "popper.js": "^1.14.0",
-    "webpack": "4.12.0"
+    "popper.js": "^1.14.0"
+  },
+  "devDependencies": {
+    "ts-lint": "^4.5.1",
+    "ts-loader": "^5.3.1",
+    "typescript": "^3.2.1",
+    "webpack-cli": "^3.1.2"
   }
 }

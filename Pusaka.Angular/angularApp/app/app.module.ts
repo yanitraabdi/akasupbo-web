@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { AppRoutes } from './app.routes';
@@ -12,12 +13,12 @@ import { SchoolModule } from './school/school.module';
 import { CategoryModule } from './category/category.module';
 import { SharedModule } from './shared/shared.module';
 
-//import { ConfirmationDialog } from './framework/confirmation-dialog/components/confirmation-dialog.component';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         AppRoutes,
         SharedModule,
         CoreModule.forRoot(),
@@ -31,8 +32,7 @@ import { FormsModule } from '@angular/forms';
     ],
 
     declarations: [
-        AppComponent,
-        //ConfirmationDialog
+        AppComponent
     ],
 
     bootstrap: [AppComponent]

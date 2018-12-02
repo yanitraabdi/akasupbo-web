@@ -1,5 +1,6 @@
-﻿import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms'
+﻿import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { MatPaginator, MatTableDataSource, MatSort } from '@angular/material';
 
 import { Category, ListCategory } from '../../models/category';
 import { CategoryService } from '../../core/services/category-data.service';
@@ -8,18 +9,45 @@ import { CategoryService } from '../../core/services/category-data.service';
     selector: 'app-category-component',
     templateUrl: './category.component.html'
 })
+
 export class CategoryComponent implements OnInit {
-    message: string;
     categories: ListCategory = new ListCategory();
     category: Category = new Category();
-    //dialogRef: ConfirmationDialog;
+    dataSource = new MatTableDataSource<Category>(this.categories.listCategory);
+    displayedColumns: string[] = ['CategoryName', 'Tag'];
+
+    @ViewChild(MatPaginator) paginator: MatPaginator;
+    @ViewChild(MatSort) sort: MatSort;
+
 
     constructor(private dataService: CategoryService) {
-        this.message = 'Things from the ASP.NET Core API';
     }
 
     ngOnInit() {
-        this.getAllCategories();
+        this.dataService
+            .getAll()
+            .subscribe(
+                data => (this.categories = data),
+                error => console.log(error),
+            () => { this.dataSource.data = this.categories.listCategory, console.log(this.dataSource.data) }
+            );
+    }
+
+    /**
+   * Set the paginator and sort after the view init since this component will
+   * be able to query its view for the initialized paginator and sort.
+   */
+    ngAfterViewInit() {
+        //this.dataSource.data = this.categories.ListCategory;
+        //console.log(this.dataSource);
+        //this.dataSource.paginator = this.paginator;
+        //this.dataSource.sort = this.sort;
+    }
+
+    applyFilter(filterValue: string) {
+        filterValue = filterValue.trim(); // Remove whitespace
+        filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
+        this.dataSource.filter = filterValue;
     }
 
     onSubmit(form: NgForm) {
@@ -84,7 +112,7 @@ export class CategoryComponent implements OnInit {
         this.dataService
             .getAll()
             .subscribe(
-                data => (this.categories = data),
+            data =>  (this.categories = data),
                 error => console.log(error),
                 () => console.log(this.categories)
             );

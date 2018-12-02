@@ -1,9 +1,30 @@
-<nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0" [routerLink]="['/home']">Pusaka Admin</a>
-    <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
-    <ul class="navbar-nav px-3">
-        <li class="nav-item text-nowrap">
-            <a class="nav-link" href="#">Sign out</a>
-        </li>
-    </ul>
-</nav>
+﻿<mat-toolbar color="warn">
+    <mat-toolbar-row>
+        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" color="primary">
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<mat-sidenav-container>
+    <mat-sidenav #drawer mode="side" opened role="navigation" fixedInViewport="true">
+        <mat-nav-list>
+            <h3 mat-subheader>Members</h3>
+            <a mat-list-item routerLink='/student'>Student</a>
+            <a mat-list-item routerLink='/school'>School</a>
+            <mat-divider></mat-divider>
+            <h3 mat-subheader>Missions</h3>
+            <a mat-list-item routerLink='/mission'>Missions</a>
+            <mat-divider></mat-divider>
+            <h3 mat-subheader>Configuration</h3>
+            <a mat-list-item routerLink='/badge'>Badge</a>
+            <a mat-list-item routerLink='/avatar'>Avatar</a>
+            <a mat-list-item routerLink='/category'>Category</a>
+            <a mat-list-item routerLink='/users'>User Admin</a>
+            <a mat-list-item routerLink='/roles'>Roles</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container> 
